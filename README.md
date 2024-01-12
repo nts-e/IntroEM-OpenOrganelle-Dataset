@@ -1,7 +1,11 @@
 # OpenOrganelle
 
-Welcome to the Electrom Microscope OpenOrganelle dataset README! (Following this excellent [paper](https://www.nature.com/articles/s41586-021-03977-3)) 
+Welcome to the Electrom Microscope OpenOrganelle dataset README! (Following this excellent [paper](https://www.nature.com/articles/s41586-021-03977-3)).
+
 This repository serves as a practical entry point for developers aiming to understand and work with the dataset. The "hello_data" Jupyter notebook, included here, demonstrates the basic process of loading a raw image crop from the dataset using MongoDB metadata and provides access to the corresponding ground truth annotated image. The README also offers detailed explanations of dataset terminology and tools for viewing images, along with insights into the file hierarchy for easy navigation. For those eager to get hands-on with the data, the README provides clear instructions on how to download the dataset, ensuring a smooth start to your exploration. 
+
+![image](https://github.com/nts-e/OpenOrganelle/assets/107881111/f609cd69-8582-45a5-a116-aeb791d358f8)
+
 
 #### Paper
 
