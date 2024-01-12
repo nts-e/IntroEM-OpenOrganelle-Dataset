@@ -1,5 +1,7 @@
 # OpenOrganelle
 
+Welcome to the Electrom Microscope OpenOrganelle dataset README! (Following this excellent [paper](https://www.nature.com/articles/s41586-021-03977-3)) 
+This repository serves as a practical entry point for developers aiming to understand and work with the dataset. The "hello_data" Jupyter notebook, included here, demonstrates the basic process of loading a raw image crop from the dataset using MongoDB metadata and provides access to the corresponding ground truth annotated image. The README also offers detailed explanations of dataset terminology and tools for viewing images, along with insights into the file hierarchy for easy navigation. For those eager to get hands-on with the data, the README provides clear instructions on how to download the dataset, ensuring a smooth start to your exploration. 
 
 #### Paper
 
@@ -35,13 +37,13 @@
 
 		B) _s3://janelia-cosem-publications/heinrich-2021a/_ - The data used for the paper.
 
-- I already downloaded the datasets from bucket B ( I chose B and not A, because the provided code in GitHub refers to B. Note that I could not explain why the size of the raw data in A is not equal to its size in B).
+- What I downloaded are the datasets fron bucket B ( I chose B and not A, because the provided code in GitHub refers to B. Note that I could not explain why the size of the raw data in A is not equal to its size in B).
 
-- The datasets are stored in this location: [\\132.72.65.219\qtree_assafzar\assafzar\OpenOrganelle\janelia-cosem-publications\heinrich-2021a](file://132.72.65.219/qtree_assafzar/assafzar/OpenOrganelle/janelia-cosem-publications/heinrich-2021a)
+- For the internal lab users, the datasets are stored in this location: [\\132.72.65.219\qtree_assafzar\assafzar\OpenOrganelle\janelia-cosem-publications\heinrich-2021a](file://132.72.65.219/qtree_assafzar/assafzar/OpenOrganelle/janelia-cosem-publications/heinrich-2021a)
 
 - I recommend beginning from **jrc_hela-2**.  
 
-- I wrote a python procedure to download the data. todo: add download procedure.
+- I wrote a python procedure to download the data (todo: add procedure).
 
 - A "hello world" for loading images from the datasets is provided [here](https://github.com/nts-e/OpenOrganelle/blob/main/Code/data_access/hello_data.ipynb).  
 
@@ -59,7 +61,7 @@
     for example, the jrc_hela-2 is here: [https://openorganelle.janelia.org/datasets/jrc_hela-2](https://openorganelle.janelia.org/datasets/jrc_hela-2)  
       
     Setup your choices and then click on the **View** button. It opens a light-weight viewer showing the image.  
-- The datasets file hierarchy and a detailed readme fiole can be viewed here: https://open.quiltdata.com/b/janelia-cosem-publications/tree/heinrich-2021a/
+- The datasets file hierarchy and a detailed readme file can be viewed here: https://open.quiltdata.com/b/janelia-cosem-publications/tree/heinrich-2021a/
   
    
 #### Code
@@ -69,10 +71,10 @@
 - There is a massive use of the [Gunpowder](http://funkey.science/gunpowder/index.html) library. Gunpowder allows you to assemble a pipeline on arbitrarily large volumes of multi-dimensional images. It complements PyTorch/TensorFlow.  
     I found it cumbersome and difficult. You might try different approaches.
     I followed [this](http://funkey.science/gunpowder/tutorial_simple_pipeline.html) tutorial to understand the Gunpowder concepts. It helped to shed some light on the authors’ code.
-- I lightly documented the train and infer procedures of the authors (all is [here](file://132.72.65.219/qtree_assafzar/assafzar/Nitsan/OpenOrganelle/partial_training/setup37) , training is the train_setup_37.ipynb file).
+- I lightly documented the train and infer procedures of the authors (lab users: all is [here](file://132.72.65.219/qtree_assafzar/assafzar/Nitsan/OpenOrganelle/partial_training/setup37) , training is the train_setup_37.ipynb file).
 - The code supports TF1. I could run it successfully, but the training was very very long and we could not achieve the same results (after several weeks we’ve only reached ~320K iterations of the 500K which were recommended.). There are [many networks and setups variations](https://github.com/janelia-cellmap/training_setups/blob/master/v0003.2/summary.md) that are provided. The best networks and setups are reported per organelle, dataset, and iteration.
-- At a certain point I asked the Janelia Institute to send me some trained model files. We still have them [here](file://132.72.65.219/qtree_assafzar/assafzar/Nitsan/OpenOrganelle/partial_training/trained_models_from_janelia).
-- We tried several days to convert these files to TF2 but it did not work. This is where we abandoned the project.
+- Lab users: trained model files from the authors can be found [here](file://132.72.65.219/qtree_assafzar/assafzar/Nitsan/OpenOrganelle/partial_training/trained_models_from_janelia).
+- We tried several days to convert these files to TF2 but it did not work. 
 
 
 #### Model Training
